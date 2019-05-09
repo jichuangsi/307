@@ -53,11 +53,11 @@ layui.use(['table', 'form'], function() {
 					title: '品名'
 				},
 
-				{
+				/*{
 					field: 'attribute',
 					align: 'center',
 					title: '属性'
-				},
+				},*/
 				{
 					field: 'supplier',
 					align: 'center',
