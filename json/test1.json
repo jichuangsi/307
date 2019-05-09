@@ -1,0 +1,67 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+				"id": 1,
+				"number": "19F-DPY-JS01",
+				"name": "戒指",
+				"userNumber": "C-001-H1",
+				"color": "金色",
+				"specifications": "S",
+				"appearance": "金色钻戒",
+				"purchase": "1组",
+				"classification": "金属",
+				"orderNumber": "OR-18-00031(19F-DPY)",
+				"materielNumber": "UP-002-JS",
+				"money": "200",
+				"charge": "小张",
+				"phone": "17875577568",
+				"date": "2016-12-31",
+				"texture": "金属",
+				"pic": "../images/1557221869(1).png",
+				"attribute": "颜色-尺寸-大小"
+			}, {
+				"id": 2,
+				"number": "19F-DPY-SL01",
+				"name": "大理石",
+				"userNumber": "C-001-H1",
+				"color": "白色",
+				"specifications": "40*40",
+				"appearance": "大理石圆桌",
+				"purchase": "2组",
+				"classification": "石料",
+				"orderNumber": "OR-18-00032(19F-DPY)",
+				"materielNumber": "UP-002-SL",
+				"money": "200",
+				"charge": "小张",
+				"phone": "17875577568",
+				"date": "2016-12-31",
+				"texture": "金属",
+				"pic": "../images/1557281553(1).png",
+				"attribute": "质量-尺寸-大小"
+			}, {
+				"id": 3,
+				"number": "19F-DPY-XJ01",
+				"name": "橡皮筋",
+				"userNumber": "C-001-H1",
+				"color": "黄色",
+				"specifications": "L",
+				"appearance": "橡皮圈",
+				"purchase": "3组",
+				"classification": "橡胶",
+				"orderNumber": "OR-18-00033(19F-DPY)",
+				"materielNumber": "UP-002-XJ",
+				"money": "200",
+				"charge": "小张",
+				"phone": "17875577568",
+				"date": "2016-12-31",
+				"texture": "金属",
+				"pic": "../images/1557281491(1).png",
+				"attribute": "颜色-尺寸-大小"
+			}
+		],
+		"total": 3,
+		"msg": "成功"
+	}
+}
