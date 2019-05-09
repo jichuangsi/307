@@ -30,13 +30,16 @@
 		.widths {
 			width: 300px;
 		}
+		
 		.add {
 			font-size: 30px;
 		}
+		
 		#order_userNumber {
 			display: none;
 			margin-top: 10px;
 		}
+		
 		.add:hover {
 			cursor: pointer;
 		}
@@ -130,7 +133,7 @@
 
 			<div class="layui-row">
 				<div class="layui-input-inline">
-					<span class="layui-btn" onclick="add()">添加</span>
+					<span class="layui-btn" onclick="add()" id="add">添加</span>
 				</div>
 				<form class="layui-form">
 					<div class="layui-input-inline">
@@ -155,7 +158,7 @@
 			function add() {
 				index = layer.open({
 					type: 1,
-					area: ['500px', '600px'],
+					area: ['90%', '90%'],
 					anim: 2,
 					title: '物料添加',
 					maxmin: true,
@@ -178,68 +181,76 @@
 		</script>
 	</body>
 	<div id="materiel_addForm" class="layui-fluid">
-		<form class="layui-form" autocomplete="off" lay-filter="test">
-			<div class="layui-form-item">
-				<label class="layui-form-label">物料编号：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="schoolName" class="layui-input ">
-				</div>
+		<div class="layui-row">
+			<div class="layui-col-md5">
+				<form class="layui-form" autocomplete="off" lay-filter="test">
+					<div class="layui-form-item">
+						<label class="layui-form-label">物料编号：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="schoolName" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">物料名称：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">物料颜色：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">物料规格：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">价格：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">供货商：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">负责人：</label>
+						<div class="layui-input-block widths">
+							<input type="text" name="address" class="layui-input ">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">采购小组：</label>
+						<div class="layui-input-block widths">
+							<select name="gradeId" lay-filter="grade">
+								<option value=""></option>
+								<option value="0">1组</option>
+								<option value="1">2组</option>
+								<option value="2">3组</option>
+								<option value="3">4组</option>
+								<option value="4">5组</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">添加</button>
+						</div>
+					</div>
+				</form>
 			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">物料名称：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
+			<div class="layui-col-md7">
+					<table id="supplier" lay-filter="supplier"></table>
 			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">物料颜色：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">物料规格：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">价格：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">供货商：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">负责人：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">采购小组：</label>
-				<div class="layui-input-block widths">
-					<select name="gradeId" lay-filter="grade">
-						<option value=""></option>
-						<option value="0">1组</option>
-						<option value="1">2组</option>
-						<option value="2">3组</option>
-						<option value="3">4组</option>
-						<option value="4">5组</option>
-					</select>
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="formDemo">添加</button>
-				</div>
-			</div>
-		</form>
+		</div>
+
 	</div>
 	<div id="materiel_updateForm" class="layui-fluid">
 		<form class="layui-form" autocomplete="off" lay-filter="test">

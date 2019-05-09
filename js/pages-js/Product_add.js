@@ -206,4 +206,81 @@ layui.use(['table', 'form'], function() {
 		$('#product_add').append(divContent);
 		form.render('checkbox');
 	}*/
+	$(document).on('click', '#add', function() {
+		table.reload('supplier');
+		})
+	//供货商列表
+		table.render({
+		elem: '#supplier',
+		method: "get",
+		async: false,
+		url: "../json/test1.json",
+		//		contentType: 'application/json',
+		//		headers: {
+		//			'accessToken': getToken()
+		//		},
+		page: true,
+		cols: [
+			[{
+					field: 'id',
+					title: '序号',
+					type: 'numbers',
+					align: 'center'
+				},
+				{
+					field: 'sellerNumber',
+					align: 'center',
+					title: '供货商编号'
+				},
+				{
+					field: 'supplier',
+					align: 'center',
+					title: '供货商名称'
+				},
+				{
+					field: 'address',
+					align: 'center',
+					title: '地址'
+				},
+				{
+					field: 'status',
+					align: 'center',
+					title: '目前状态'
+				},
+				{
+					field: 'date',
+					align: 'center',
+					title: '生效日期'
+				},
+				{
+					field: 'phone',
+					align: 'center',
+					title: '类型电话'
+				},
+				{
+					field: 'charge',
+					align: 'center',
+					title: '负责人'
+				}
+			]
+		],
+		loading: true,
+		parseData: function(res) {
+			var arr;
+			var code;
+			var total;
+			if(res.code == "0010") {
+				code = 0;
+				arr = res.data.list;
+				total = res.data.total;
+			}
+			return {
+				"code": 0,
+				"msg": res.msg,
+				"count": total,
+				"data": arr
+			};
+		}
+	})
+	
 });
