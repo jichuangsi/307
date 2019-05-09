@@ -78,7 +78,11 @@ layui.use(['table', 'form', 'element'], function() {
 					align: 'center',
 					title: '地址'
 				},
-
+				{
+					field: 'money',
+					align: 'center',
+					title: '出货价格(/元)'
+				},
 				{
 					field: 'phone',
 					align: 'center',

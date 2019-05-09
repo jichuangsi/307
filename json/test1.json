@@ -14,7 +14,7 @@
 				"classification": "金属",
 				"orderNumber": "OR-18-00031(19F-DPY)",
 				"materielNumber": "UP-002-JS",
-				"money": "200",
+				"money": "21100",
 				"charge": "小张",
 				"phone": "17875577568",
 				"date": "2016-12-31",
@@ -24,7 +24,7 @@
 				"supplier":"海亿金属材料公司",
 				"sellerNumber":"JS01",
 				"address":"广东 广州市 越秀区 街道地址北京路1号",
-				"status":"生效",
+				"status":"可用",
 				"customerName":"启蒙有限公司"
 				
 			}, {
@@ -39,7 +39,7 @@
 				"classification": "石料",
 				"orderNumber": "OR-18-00032(19F-DPY)",
 				"materielNumber": "UP-002-SL",
-				"money": "200",
+				"money": "2020",
 				"charge": "小张",
 				"phone": "17875577568",
 				"date": "2016-12-31",
@@ -49,7 +49,7 @@
 				"supplier":"沪宝金属材料公司",
 				"sellerNumber":"JS01",
 				"address":"广东 广州市 越秀区 街道地址北京路13号",
-				"status":"生效",
+				"status":"停用",
 				"customerName":"西星有限公司"
 			}, {
 				"id": 3,
@@ -63,7 +63,7 @@
 				"classification": "橡胶",
 				"orderNumber": "OR-18-00033(19F-DPY)",
 				"materielNumber": "UP-002-XJ",
-				"money": "200",
+				"money": "220",
 				"charge": "小张",
 				"phone": "17875577568",
 				"date": "2016-12-31",
@@ -73,7 +73,7 @@
 				"supplier":"恒大金属材料公司",
 				"sellerNumber":"JS01",
 				"address":"广东 广州市 越秀区 街道地址北京路22号",
-				"status":"生效",
+				"status":"停用",
 				"customerName":"凌越有限公司"
 			}
 		],

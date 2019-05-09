@@ -122,7 +122,7 @@ layui.use(['table', 'form'], function() {
 //			renderTable();
 //		})
 		$(document).on('click', '#look2', function() {
-			var toUrl = "Commodity-details.html?id=" + param.id
+			var toUrl = "Commodity-details.html?id=" +id
 			window.open(toUrl, '_self');
 		})
 		form.val('test',{
