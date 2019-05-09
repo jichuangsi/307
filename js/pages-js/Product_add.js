@@ -80,17 +80,73 @@ layui.use(['table', 'form'], function() {
 	form.on('select(city)', function(data) {
 		var param = data.value;
 		console.log(param.city)
-		if(param.city != "-1") {
-			if(param == "0") {
-				getMetal();
-			} else if(param == "1") {
-				getStoneMaterial()
-			} else if(param == "2") {
-				getRubber()
-			}
+		if(param != "-1") {
+			$(document).on('click', '#add', function() {
+				splicing();
+			});
+			$(document).on('click', '.layui-icon-close', function() {
+				reduce(this);
+			});
 		}
 	});
-	//获取金属属性
+	var count = 1;
+	//添加
+	function splicing() {
+		var divContent = "";
+		count++
+		divContent += '<div class="layui-form-item" dataid="' + count + '">';
+		divContent += '<label class="layui-form-label">规格</label>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">颜色</option>';
+		divContent += '<option value="0">金色</option>';
+		divContent += '<option value="1">银色</option>';
+		divContent += '<option value="2">蓝色</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">尺寸</option>';
+		divContent += '<option value="0">S</option>';
+		divContent += '<option value="1">M</option>';
+		divContent += '<option value="2">L</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">形状</option>';
+		divContent += '<option value="0">圆形</option>';
+		divContent += '<option value="1">半圆形</option>';
+		divContent += '<option value="2">正方形</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 60px">';
+		divContent += '<input type="text" name="address" class="layui-input "placeholder="数量">';
+		divContent += '</div>';
+		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add"></i> </div>'
+		divContent += '</div>';
+		$('#product_color').append(divContent);
+		form.render('select');
+		reduce(obj);
+	}
+	//减少
+	function reduce(obj) {
+		console.log(obj.parentNode.parentNode.value)
+		var div = $(obj.parentNode.parentNode).attr('dataid')
+		console.log(div)
+		//		 $('#product_color').find('.layui-form-item').eq(div- 1).remove();
+
+		var str = $('#product_color').find('.layui-form-item').length;
+		for(var i = 0; i < str; i++) {
+			if($('#product_color').find('.layui-form-item').eq(i).attr('dataid') == div) {
+				console.log(1)
+				$('#product_color').find('.layui-form-item').eq(i).remove()
+			}
+
+		}
+	}
+
+	/*//获取金属属性
 	function getMetal() {
 		$('#product_add').empty();
 		var divContent = "";
@@ -149,5 +205,5 @@ layui.use(['table', 'form'], function() {
 		console.log(divContent)
 		$('#product_add').append(divContent);
 		form.render('checkbox');
-	}
+	}*/
 });

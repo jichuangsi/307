@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>产品信息</title>
+		<title>商品信息</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
@@ -31,6 +31,19 @@
 			height: auto;
 			height: 100%;
 		}
+		.widths{
+			width: 300px;
+		}
+		.add {
+			font-size: 30px;
+		}
+		#order_userNumber {
+			display: none;
+			margin-top: 10px;
+		}
+		.add:hover {
+			cursor: pointer;
+		}
 		/*.layui-table-cell {
 			height: auto !important;
 		}*/
@@ -45,15 +58,7 @@
 			<div class="layui-row">
 				<form class="layui-form layui-col-md12">
 					<div class="layui-input-inline">
-						<input class="layui-input" placeholder="产品编号" name="start" id="start">
-					</div>
-					<div class="layui-input-inline">
-						<select name="contrller">
-							<option>产品分类</option>
-							<option>金属</option>
-							<option>石料</option>
-							<option>橡胶</option>
-						</select>
+						<input class="layui-input" placeholder="商品编号" name="start" id="start">
 					</div>
 					<div class="layui-input-inline">
 						<input type="text" name="username" placeholder="品名" autocomplete="off" class="layui-input">
@@ -75,7 +80,7 @@
 			<span class="layui-btn layui-btn-sm  layui-btn-danger">删除</span>
 		</script>
 		<script type="text/html" id="product_add">
-			<span class="layui-btn-sm layui-btn" onclick="add()">添加产品</span>
+			<span class="layui-btn-sm layui-btn" onclick="add()">添加商品</span>
 			<!--<span class="layui-btn-sm layui-btn" onclick="add2()">添加产品2</span>-->
 		</script>
 		<script type="text/html" id="product_update">
@@ -83,6 +88,9 @@
 		</script>
 		<script type="text/html" id="productr_see">
 			<span class="layui-btn-sm layui-btn" id="look">查看</span>
+		</script>
+		<script type="text/html" id="productr_see2">
+			<span class="layui-btn-sm layui-btn" id="look2">详情</span>
 		</script>
 		<script type="text/html" id="img">
 			<img src="{{d.pic}}" />
@@ -105,7 +113,7 @@
 					type: 2,
 					area: ['95%', '90%'],
 					anim: 2,
-					title: '产品添加',
+					title: '商品添加',
 					maxmin: true,
 					shadeClose: true,
 					content: 'Product_add2.html'
@@ -115,9 +123,9 @@
 			function update() {
 				index = layer.open({
 					type: 1,
-					area: ['400px', '500px'],
+					area: ['550px', '500px'],
 					anim: 2,
-					title: '产品修改',
+					title: '商品修改',
 					maxmin: true,
 					shadeClose: true,
 					content: $('#product_updateForm')
@@ -129,46 +137,54 @@
 	<div id="product_updateForm" class="layui-fluid">
 		<form class="layui-form" autocomplete="off" lay-filter="test">
 			<div class="layui-form-item">
-				<label class="layui-form-label">产品编号：</label>
+				<label class="layui-form-label">商品编号：</label>
 				<div class="layui-input-block widths">
-					<input type="text" name="schoolName" class="layui-input ">
+					<input type="text" name="number" class="layui-input " readonly="readonly">
 				</div>
 			</div>
 			<div class="layui-form-item">
-				<label class="layui-form-label">采购小组：</label>
+				<label class="layui-form-label">品名：</label>
 				<div class="layui-input-block widths">
-					<select name="gradeId" lay-filter="grade">
-						<option value=""></option>
-						<option value="0">1组</option>
-						<option value="1">2组</option>
-						<option value="2">3组</option>
-						<option value="3">4组</option>
-						<option value="4">5组</option>
-					</select>
+					<input type="text" name="name" class="layui-input ">
 				</div>
 			</div>
 			<div class="layui-form-item">
-				<label class="layui-form-label">客户编号：</label>
+				<label class="layui-form-label">供货商：</label>
 				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
+					<input type="text" name="supplier" class="layui-input ">
 				</div>
 			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">颜色：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">规格：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">外观：</label>
-				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
+			<div class="layui-row" id="product_color">
+				<div class="layui-form-item" value="1">
+					<label class="layui-form-label">属性：</label>
+					<div class="layui-input-inline" style="width: 70px;">
+						<select name="city" lay-verify="required">
+							<option value="">颜色</option>
+							<option value="0">金色</option>
+							<option value="1">银色</option>
+							<option value="2">蓝色</option>
+						</select>
+					</div>
+					<div class="layui-input-inline" style="width: 70px;">
+						<select name="city" lay-verify="required">
+							<option value="">尺寸</option>
+							<option value="0">S</option>
+							<option value="1">M</option>
+							<option value="2">L</option>
+						</select>
+					</div>
+					<div class="layui-input-inline" style="width:70px;">
+						<select name="city" lay-verify="required">
+							<option value="">形状</option>
+							<option value="0">圆形</option>
+							<option value="1">半圆形</option>
+							<option value="2">正方形</option>
+						</select>
+					</div>
+					<div class="layui-input-inline" style="width: 60px;">
+						<input type="text" name="address" class="layui-input " placeholder="数量">
+					</div>
+					<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-add-circle-fine add" id="add"></i> </div>
 				</div>
 			</div>
 			<div class="layui-form-item">

@@ -34,11 +34,6 @@ layui.use(['table', 'form'], function() {
 					title: '颜色'
 				},
 				{
-					field: 'specifications',
-					title: '属性',
-					toolbar: "#order_attribute"
-				},
-				{
 					field: 'appearance',
 					title: '查看物料',
 					toolbar: "#order_see"

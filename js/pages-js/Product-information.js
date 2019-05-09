@@ -1,12 +1,30 @@
 layui.use(['table', 'form'], function() {
 	var table = layui.table;
 	var form = layui.form;
+
+	function UrlSearch() { //获取url里面的参数
+		var name, value;
+		var str = location.href; //取得整个地址栏
+		var num = str.indexOf("?")
+		str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+		var arr = str.split("="); //各个参数放到数组里
+		return arr[1];
+	}
+	var id = UrlSearch();
+	var toUrl = "../json/test1.json"
+	if(id == "1") {
+		toUrl = "../json/data.json"
+	} else if(id == "2") {
+		toUrl = "../json/data2.json"
+	} else if(id == "3") {
+		toUrl = "../json/data3.json"
+	}
 	table.render({
 		elem: '#demo',
 		method: "get",
 		async: false,
-		cellMinWidth: 80 ,
-		url: "../json/test1.json",
+		cellMinWidth: 80,
+		url: toUrl,
 		//		contentType: 'application/json',
 		//		headers: {
 		//			'accessToken': getToken()
@@ -22,12 +40,12 @@ layui.use(['table', 'form'], function() {
 				{
 					field: 'number',
 					align: 'center',
-					title: '产品编号'
+					title: '商品编号'
 				},
 				{
 					field: 'classification',
 					align: 'center',
-					title: '产品大类'
+					title: '类别'
 				},
 				{
 					field: 'name',
@@ -41,6 +59,11 @@ layui.use(['table', 'form'], function() {
 					title: '属性'
 				},
 				{
+					field: 'supplier',
+					align: 'center',
+					title: '供货商'
+				},
+				{
 					field: 'pic',
 					title: '图片',
 					templet: '#img',
@@ -49,10 +72,16 @@ layui.use(['table', 'form'], function() {
 				},
 				{
 					field: 'appearance',
-					title: '查看物料',
+					title: '查看商品',
 					align: 'center',
-					toolbar: "#productr_see"
+					toolbar: "#productr_see2"
 				},
+//				{
+//					field: 'appearance',
+//					title: '查看物料',
+//					align: 'center',
+//					toolbar: "#productr_see"
+//				},
 				{
 					field: 'appearance',
 					title: '删除',
@@ -89,9 +118,18 @@ layui.use(['table', 'form'], function() {
 
 	table.on('row(demo)', function(data) {
 		var param = data.data;
-		$(document).on('click', '#look', function() {
-			renderTable();
+//		$(document).on('click', '#look', function() {
+//			renderTable();
+//		})
+		$(document).on('click', '#look2', function() {
+			var toUrl = "Commodity-details.html?id=" + param.id
+			window.open(toUrl, '_self');
 		})
+		form.val('test',{
+			"number":param.number,
+			"name":param.name,
+			"supplier":param.supplier
+		});
 	});
 	renderTable = function() {
 		table.render({
@@ -154,5 +192,68 @@ layui.use(['table', 'form'], function() {
 				};
 			}
 		})
+	}
+
+	$(document).on('click', '#add', function() {
+		splicing();
+	});
+	$(document).on('click', '.layui-icon-close', function() {
+		reduce(this);
+	});
+	var count = 1;
+	//添加
+	function splicing() {
+		var divContent = "";
+		count++
+		divContent += '<div class="layui-form-item" dataid="' + count + '">';
+		divContent += '<label class="layui-form-label">规格</label>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">颜色</option>';
+		divContent += '<option value="0">金色</option>';
+		divContent += '<option value="1">银色</option>';
+		divContent += '<option value="2">蓝色</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">尺寸</option>';
+		divContent += '<option value="0">S</option>';
+		divContent += '<option value="1">M</option>';
+		divContent += '<option value="2">L</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<select name="city" lay-verify="required">';
+		divContent += '<option value="">形状</option>';
+		divContent += '<option value="0">圆形</option>';
+		divContent += '<option value="1">半圆形</option>';
+		divContent += '<option value="2">正方形</option>';
+		divContent += '</select>';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 60px">';
+		divContent += '<input type="text" name="address" class="layui-input "placeholder="数量">';
+		divContent += '</div>';
+		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add"></i> </div>'
+		divContent += '</div>';
+		$('#product_color').append(divContent);
+		form.render('select');
+		reduce(obj);
+	}
+	//减少
+	function reduce(obj) {
+		console.log(obj.parentNode.parentNode.value)
+		var div = $(obj.parentNode.parentNode).attr('dataid')
+		console.log(div)
+		//		 $('#product_color').find('.layui-form-item').eq(div- 1).remove();
+
+		var str = $('#product_color').find('.layui-form-item').length;
+		for(var i = 0; i < str; i++) {
+			if($('#product_color').find('.layui-form-item').eq(i).attr('dataid') == div) {
+				console.log(1)
+				$('#product_color').find('.layui-form-item').eq(i).remove()
+			}
+
+		}
 	}
 });

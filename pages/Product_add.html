@@ -30,6 +30,16 @@
 		.widths {
 			width: 300px;
 		}
+		.add {
+			font-size: 30px;
+		}
+		#order_userNumber {
+			display: none;
+			margin-top: 10px;
+		}
+		.add:hover {
+			cursor: pointer;
+		}
 	</style>
 
 	<body>
@@ -60,10 +70,39 @@
 								</select>
 							</div>
 						</div>
-						<div class="layui-row" id="product_add">
-
+						<div class="layui-row" id="product_color">
+							<div class="layui-form-item" value="1">
+								<label class="layui-form-label">属性：</label>
+								<div class="layui-input-inline" style="width: 70px;">
+									<select name="city" lay-verify="required">
+										<option value="">颜色</option>
+										<option value="0">金色</option>
+										<option value="1">银色</option>
+										<option value="2">蓝色</option>
+									</select>
+								</div>
+								<div class="layui-input-inline" style="width: 70px;">
+									<select name="city" lay-verify="required">
+										<option value="">尺寸</option>
+										<option value="0">S</option>
+										<option value="1">M</option>
+										<option value="2">L</option>
+									</select>
+								</div>
+								<div class="layui-input-inline" style="width:70px;">
+									<select name="city" lay-verify="required">
+										<option value="">形状</option>
+										<option value="0">圆形</option>
+										<option value="1">半圆形</option>
+										<option value="2">正方形</option>
+									</select>
+								</div>
+								<div class="layui-input-inline" style="width: 60px;">
+									<input type="text" name="address" class="layui-input " placeholder="数量">
+								</div>
+								<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-add-circle-fine add" id="add"></i> </div>
+							</div>
 						</div>
-
 						<div class="layui-form-item">
 							<label class="layui-form-label">外观：</label>
 							<div class="layui-input-block widths">

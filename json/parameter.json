@@ -1,0 +1,31 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+				"id": 1,
+				"color": "白色",
+				"shape": "圆形",
+				"size": "L",
+				"classification": "金属",
+				"number": "20"
+			}, {
+				"id": 2,
+				"color": "金色",
+				"shape": "圆形",
+				"size": "M",
+				"classification": "金属",
+				"number": "20"
+			}, {
+				"id": 3,
+				"color": "银色",
+				"shape": "圆形",
+				"size": "S",
+				"classification": "金属",
+				"number": "20"
+			}
+		],
+		"total": 3,
+		"msg": "成功"
+	}
+}

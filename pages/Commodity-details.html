@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../css/font.css">
+		<link rel="stylesheet" href="../css/xadmin.css">
+		<link rel="stylesheet" href="../lib/layui/css/layui.css" media="all">
+		<script src="../lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/xadmin.js"></script>
+		<script type="text/javascript" src="../js/pages-js/Commodity-details.js"></script>
+	</head>
+	<style>
+		input[type="text"] {
+			border-style: none
+		}
+		
+		.widths {
+			width: 300px;
+		}
+		
+		.layui-form-label {
+			width: 100px;
+		}
+		
+		.layui-input-block {
+			margin-left: 130px;
+			min-height: 36px
+		}
+	</style>
+
+	<body>
+		<div class="x-nav">
+			<a href="javascript:history.go(-1)" class="layui-btn layui-btn-small" style="margin-top:3px;margin-right: 8px;">返回</a>
+			<span id="classInfo" style="color: #CCCCCC;"></span>
+			<a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+				<i class="layui-icon" style="line-height:30px">&#xe669;</i></a>
+		</div>
+		<div class="x-body">
+			<div class="layui-row">
+				<div class="layui-col-md4">
+					<form class="layui-form" autocomplete="off" lay-filter="test">
+						<div class="layui-form-item">
+							<label class="layui-form-label" style="font-size: 18px;">基本信息</label>
+							<div class="layui-input-block widths">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">商品编号：</label>
+							<div class="layui-input-block widths">
+								<input type="text" name="number" class="layui-input"  readonly="readonly">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">类别：</label>
+							<div class="layui-input-block widths">
+								<input type="text" name="classification" class="layui-input"  readonly="readonly">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">品名：</label>
+							<div class="layui-input-block widths">
+								<input type="text" name="name" class="layui-input"  readonly="readonly">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">供货商：</label>
+							<div class="layui-input-block widths">
+								<input type="text" name="supplier" class="layui-input" readonly="readonly">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">图片：</label>
+							<div class="layui-input-block widths">
+								<img src="" id="img" />
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="layui-col-md8">
+					<div class="layui-collapse" lay-filter="test">
+						<div class="layui-colla-item">
+							<h2 class="layui-colla-title">客户列表</h2>
+							<div class="layui-colla-content">
+								<div class="layui-row">
+									<table id="demo" lay-filter="demo"></table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-colla-item">
+							<h2 class="layui-colla-title">物料列表</h2>
+							<div class="layui-colla-content">
+								<div class="layui-row">
+									<table id="materiel" lay-filter="materiel"></table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-colla-item">
+							<h2 class="layui-colla-title">供货商列表</h2>
+							<div class="layui-colla-content">
+								<div class="layui-row">
+									<table id="supplier" lay-filter="supplier"></table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-colla-item">
+							<h2 class="layui-colla-title">参数详细列表</h2>
+							<div class="layui-colla-content">
+								<div class="layui-row">
+									<table id="parameter" lay-filter="parameter"></table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
