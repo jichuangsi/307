@@ -1,0 +1,34 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+				"id": 1,
+				"number":"19F-DPY-TS021",
+				"classification":"头饰",
+				"name":"头圈",
+				"supplier":"亚联公司",
+				"pic":"../images/1557471623(1).png",
+				"money":"25"
+			}, {
+				"id": 2,
+				"number":"19F-DPY-TS022",
+				"classification":"头饰",
+				"name":"头圈",
+				"supplier":"亚联公司",
+				"pic":"../images/1557471592(1).png",
+				"money":"15"
+			}, {
+				"id": 3,
+				"number":"19F-DPY-TS023",
+				"classification":"头饰",
+				"name":"头圈",
+				"supplier":"亚联公司",
+				"pic":"../images/1557471567(1).png",
+				"money":"15"
+			}
+		],
+		"total": 3,
+		"msg": "成功"
+	}
+}

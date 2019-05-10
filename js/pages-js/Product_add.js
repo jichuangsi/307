@@ -262,6 +262,11 @@ layui.use(['table', 'form'], function() {
 					align: 'center',
 					title: '价格'
 				},
+					{
+					field: 'nearMoney',
+					align: 'center',
+					title: '近期价格'
+				},
 				{
 					field: 'date',
 					align: 'center',

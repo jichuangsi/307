@@ -1,0 +1,33 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+				"id": 1,
+				"number":"19F-DPY-TS021",
+				"classification":"辅料",
+				"name":"金属配件",
+				"supplier":"亚联公司",
+				"pic":"../images/1557473009(1).png","money":"12"
+			}, {
+				"id": 2,
+				"number":"19F-DPY-TS022",
+				"classification":"辅料",
+				"name":"金属配件",
+				"supplier":"亚联公司",
+				"pic":"../images/1557473069(1).png",
+				"money":"115"
+			}, {
+				"id": 3,
+				"number":"19F-DPY-TS023",
+				"classification":"辅料",
+				"name":"金属配件",
+				"supplier":"亚联公司",
+				"pic":"../images/1557473115(1).png",
+				"money":"15"
+			}
+		],
+		"total": 3,
+		"msg": "成功"
+	}
+}

@@ -11,13 +11,23 @@ layui.use(['table', 'form'], function() {
 		return arr[1];
 	}
 	var id = UrlSearch();
-	var toUrl = "../json/test1.json"
+	var toUrl = "../json/Headwear1.json"
 	if(id == "1") {
-		toUrl = "../json/data.json"
+		toUrl = "../json/Headwear1.json"
 	} else if(id == "2") {
-		toUrl = "../json/data2.json"
+		toUrl = "../json/Headwear2.json"
 	} else if(id == "3") {
-		toUrl = "../json/data3.json"
+		toUrl = "../json/material1.json"
+	}else if(id == "4") {
+		toUrl = "../json/material2.json"
+	}else if(id == "5") {
+		toUrl = "../json/Sundry2.json"
+	}else if(id == "6") {
+		toUrl = "../json/Sundry1.json"
+	}else if(id == "7") {
+		toUrl = "../json/Jewelry1.json"
+	}else if(id == "8") {
+		toUrl = "../json/Jewelry2.json"
 	}
 	table.render({
 		elem: '#demo',
@@ -53,11 +63,11 @@ layui.use(['table', 'form'], function() {
 					title: '品名'
 				},
 
-				/*{
-					field: 'attribute',
+				{
+					field: 'money',
 					align: 'center',
-					title: '属性'
-				},*/
+					title: '近期价格(/元)'
+				},
 				{
 					field: 'supplier',
 					align: 'center',
@@ -122,7 +132,8 @@ layui.use(['table', 'form'], function() {
 //			renderTable();
 //		})
 		$(document).on('click', '#look2', function() {
-			var toUrl = "Commodity-details.html?id=" +id
+			var toUrl = "Commodity-details.html?id=" +param.id
+			sessionStorage.setItem('jsonId',id);
 			window.open(toUrl, '_self');
 		})
 		form.val('test',{

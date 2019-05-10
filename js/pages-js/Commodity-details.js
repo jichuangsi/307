@@ -12,7 +12,47 @@ layui.use(['table', 'form', 'element'], function() {
 		return arr[1];
 	}
 	var id = UrlSearch();
-	setVal(id);
+	//setVal(id);
+	var jsonId=sessionStorage.getItem('jsonId');
+	var toUrl = "../json/Headwear1.json";
+	if(jsonId == "1") {
+		toUrl = "../json/Headwear1.json"
+	} else if(jsonId == "2") {
+		toUrl = "../json/Headwear2.json"
+	} else if(jsonId == "3") {
+		toUrl = "../json/data3.json"
+	}else if(jsonId == "4") {
+		toUrl = "../json/material2.json"
+	}else if(jsonId == "5") {
+		toUrl = "../json/Sundry2.json"
+	}else if(jsonId == "6") {
+		toUrl = "../json/Sundry1.json"
+	}else if(jsonId == "7") {
+		toUrl = "../json/Jewelry1.json"
+	}else if(jsonId == "8") {
+		toUrl = "../json/Jewelry2.json"
+	}
+	getData();
+
+	function getData() {
+		$.ajax({
+			type: "get",
+			url: toUrl,
+			async: false,
+			success: function(res) {
+				console.log(res)
+				var arr = res.data.list;
+				var param=arr[id-1]
+				form.val('test', {
+					"number": param.number,
+					"classification": param.classification,
+					"name":param.name ,
+					"supplier": param.supplier
+				});
+				$('#img').attr("src", param.pic)
+			}
+		});
+	}
 
 	function setVal(id) {
 		if(id == "1") {
@@ -20,7 +60,6 @@ layui.use(['table', 'form', 'element'], function() {
 				"number": "19F-DPY-JS011",
 				"classification": "金属",
 				"name": "戒指",
-				"attribute": "颜色-尺寸-形状",
 				"supplier": "海亿金属材料公司"
 			});
 			$('#img').attr("src", "../images/1557221809(1).png")
@@ -29,7 +68,6 @@ layui.use(['table', 'form', 'element'], function() {
 				"number": "19F-DPY-SL023",
 				"classification": "石料",
 				"name": "大理石浴缸",
-				"attribute": "颜色-尺寸-形状",
 				"supplier": "2号石料材料公司"
 			});
 			$('#img').attr("src", "../images/1557373832(1).png")
@@ -38,7 +76,6 @@ layui.use(['table', 'form', 'element'], function() {
 				"number": "19F-DPY-SL023",
 				"classification": "橡胶",
 				"name": "橡胶手环",
-				"attribute": "颜色-尺寸-形状",
 				"supplier": "3号橡胶材料公司"
 			});
 			$('#img').attr("src", "../images/1557374061(1).png")
@@ -224,6 +261,16 @@ layui.use(['table', 'form', 'element'], function() {
 					field: 'supplier',
 					align: 'center',
 					title: '供货商名称'
+				},
+				{
+					field: 'money',
+					align: 'center',
+					title: '当前价格'
+				},
+				{
+					field: 'nearMoney',
+					align: 'center',
+					title: '近期价格'
 				},
 				{
 					field: 'address',
