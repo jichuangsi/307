@@ -94,10 +94,22 @@ layui.use(['table', 'form'], function() {
 			$(document).on('click', '#add', function() {
 				splicing();
 			});
-			$(document).on('click', '.layui-icon-close', function() {
+		}
+	});
+	$(document).on('click', '.zxc', function() {
 				reduce(this);
 			});
-		}
+	$(document).on('click', '#add2', function() {
+		setSupplier();
+	});
+	$(document).on('click', '.Supplier', function() {
+		reduceSupplier(this);
+	});
+	$(document).on('click', '#add3', function() {
+		setCustomerName();
+	});
+	$(document).on('click', '.CustomerName', function() {
+		reduceCustomerNamer(this);
 	});
 	var count = 1;
 	//添加
@@ -106,7 +118,7 @@ layui.use(['table', 'form'], function() {
 		count++
 		divContent += '<div class="layui-form-item" dataid="' + count + '">';
 		divContent += '<label class="layui-form-label">规格</label>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
 		divContent += '<select name="city" lay-verify="required">';
 		divContent += '<option value="">颜色</option>';
 		divContent += '<option value="0">金色</option>';
@@ -114,7 +126,7 @@ layui.use(['table', 'form'], function() {
 		divContent += '<option value="2">蓝色</option>';
 		divContent += '</select>';
 		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
 		divContent += '<select name="city" lay-verify="required">';
 		divContent += '<option value="">尺寸</option>';
 		divContent += '<option value="0">S</option>';
@@ -122,7 +134,7 @@ layui.use(['table', 'form'], function() {
 		divContent += '<option value="2">L</option>';
 		divContent += '</select>';
 		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
 		divContent += '<select name="city" lay-verify="required">';
 		divContent += '<option value="">形状</option>';
 		divContent += '<option value="0">圆形</option>';
@@ -130,7 +142,7 @@ layui.use(['table', 'form'], function() {
 		divContent += '<option value="2">正方形</option>';
 		divContent += '</select>';
 		divContent += '</div>';
-		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add"></i> </div>'
+		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add zxc"></i> </div>'
 		divContent += '</div>';
 		$('#product_color').append(divContent);
 		form.render('select');
@@ -138,21 +150,85 @@ layui.use(['table', 'form'], function() {
 	}
 	//减少
 	function reduce(obj) {
-		console.log(obj.parentNode.parentNode.value)
 		var div = $(obj.parentNode.parentNode).attr('dataid')
-		console.log(div)
-		//		 $('#product_color').find('.layui-form-item').eq(div- 1).remove();
-
 		var str = $('#product_color').find('.layui-form-item').length;
 		for(var i = 0; i < str; i++) {
 			if($('#product_color').find('.layui-form-item').eq(i).attr('dataid') == div) {
-				console.log(1)
+				console.log(789)
 				$('#product_color').find('.layui-form-item').eq(i).remove()
 			}
 
 		}
 	}
+	var number = 1;
 
+	function setSupplier() {
+		var divContent = "";
+		number++
+		divContent += '<div class="layui-form-item" dataid1="' + number + '">';
+		divContent += '<label class="layui-form-label">供应商：</label>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="供应商名称">';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="联系方式">';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="地址">';
+		divContent += '</div>';
+		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add Supplier"></i> </div>';
+		divContent += '</div>';
+		$('#gys').append(divContent);
+		console.log(21212)
+		//reduceSupplier(obj);
+	}
+
+	function reduceSupplier(obj) {
+		var div = $(obj.parentNode.parentNode).attr('dataid1')
+		var str = $('#gys').find('.layui-form-item').length;
+		for(var i = 0; i < str; i++) {
+			if($('#gys').find('.layui-form-item').eq(i).attr('dataid1') == div) {
+				console.log(456)
+				$('#gys').find('.layui-form-item').eq(i).remove()
+			}
+
+		}
+	}
+
+	var number2 = 1;
+
+	function setCustomerName() {
+		var divContent = "";
+		number2++;
+		divContent += '<div class="layui-form-item" dataid2="' + number2 + '">';
+		divContent += '<label class="layui-form-label">客户：</label>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="客户名称">';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="联系方式">';
+		divContent += '</div>';
+		divContent += '<div class="layui-input-inline" style="width: 80px;">';
+		divContent += '<input type="text" name="address" class="layui-input " placeholder="地址">';
+		divContent += '</div>';
+		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add CustomerName"></i> </div>';
+		divContent += '</div>';
+		$('#kh').append(divContent);
+		console.log(212)
+		//reduceSupplier(obj);
+	}
+
+	function reduceCustomerNamer(obj) {
+		var div = $(obj.parentNode.parentNode).attr('dataid2')
+		var str = $('#kh').find('.layui-form-item').length;
+		for(var i = 0; i < str; i++) {
+			if($('#kh').find('.layui-form-item').eq(i).attr('dataid2') == div) {
+				console.log(123)
+				$('#kh').find('.layui-form-item').eq(i).remove()
+			}
+
+		}
+	}
 	/*//获取金属属性
 	function getMetal() {
 		$('#product_add').empty();
@@ -215,9 +291,9 @@ layui.use(['table', 'form'], function() {
 	}*/
 	$(document).on('click', '#add', function() {
 		table.reload('supplier');
-		})
+	})
 	//供货商列表
-		table.render({
+	table.render({
 		elem: '#supplier',
 		method: "get",
 		async: false,
@@ -259,7 +335,7 @@ layui.use(['table', 'form'], function() {
 					align: 'center',
 					title: '价格'
 				},
-					{
+				{
 					field: 'nearMoney',
 					align: 'center',
 					title: '近期价格'
@@ -299,5 +375,5 @@ layui.use(['table', 'form'], function() {
 			};
 		}
 	})
-	
+
 });
