@@ -34,6 +34,16 @@ layui.use(['table', 'form'], function() {
 					title: '物料规格'
 				},
 				{
+					field: 'money',
+					align: 'center',
+					title: '价格'
+				},
+				{
+					field: 'supplier',
+					align: 'center',
+					title: '供货商'
+				},
+				{
 					field: 'purchase',
 					title: '采购小组'
 				},
@@ -246,6 +256,11 @@ layui.use(['table', 'form'], function() {
 					field: 'status',
 					align: 'center',
 					title: '目前状态'
+				},
+				{
+					field: 'money',
+					align: 'center',
+					title: '价格'
 				},
 				{
 					field: 'date',
