@@ -33,11 +33,12 @@ layui.use(['table', 'form'], function() {
 					field: 'color',
 					title: '颜色'
 				},
+				//				{
+				//					field: 'appearance',
+				//					title: '查看物料',
+				//					toolbar: "#order_see"
+				//				},
 				{
-					field: 'appearance',
-					title: '查看物料',
-					toolbar: "#order_see"
-				}, {
 					field: 'appearance',
 					title: '加入订单',
 					toolbar: "#order_add"
@@ -66,21 +67,78 @@ layui.use(['table', 'form'], function() {
 
 	table.on('row(product)', function(data) {
 		var param = data.data;
-		$(document).on('click', '#look', function() {
-			renderTable();
+		//renderTable();
+		form.val('test2', {
+			"id": param.id,
+			"number": param.number,
+			"name": param.name,
+			"userNumber": param.userNumber
 		})
 	});
-	renderTable = function() {
-		table.render({
-			elem: '#materiel',
+	var arr = {
+		"id": "",
+		"number": "",
+		"name": "",
+		"userNumber": "",
+		"userProductNmber": "",
+		"count": ""
+	}
+	var list = [];
+	form.on('submit(orderadd)', function(data) {
+		var param = data.field;
+		arr.id = param.id;
+		arr.number = param.number;
+		arr.name = param.name;
+		arr.userNumber = param.userNumber;
+		arr.userProductNmber = param.userProductNmber;
+		arr.count = param.count;
+		list.push(arr);
+		console.log(list)
+		getTable(list);
+		layer.close(index);
+	})
+
+	function getTable(list) {
+		$("#order").empty();
+		var divContent = "";
+		var count=1;
+		var str = $("#order").find('tbody').length;
+		divContent += '<thead>';
+		divContent += '<tr>';
+		divContent += '<th>序号</th>';
+		divContent += '<th>编号</th>';
+		divContent += '<th>品名</th>';
+		divContent += '<th>客户编号</th>';
+		divContent += '<th>客户产品编号</th>';
+		divContent += '<th>数量</th>';
+		divContent += '</tr>';
+		divContent += '</thead>';
+		divContent += '<tbody>';
+		for(var i = 0; i < list.length; i++) {
+			divContent += '<tr>';
+			divContent += '<td>' +  count+ '</td>';
+			divContent += '<td>' + list[i].number + '</td>';
+			divContent += '<td>' + list[i].name + '</td>';
+			divContent += '<td>' + list[i].userNumber + '</td>';
+			divContent += '<td>' + list[i].userProductNmber + '</td>';
+			divContent += '<td>' + list[i].count + '</td>';
+			divContent += '</tr>';
+			count++;
+		}
+		divContent += '</tbody>';
+		$("#order").append(divContent);
+
+	}
+
+	/*	renderTable=function(data){
+			console.log(data)
+			table.render({
+			elem: '#order',
 			method: "get",
 			async: false,
-			url: "../json/test1.json",
-			//		contentType: 'application/json',
-			//		headers: {
-			//			'accessToken': getToken()
-			//		},
-			page: true,
+			url: data,
+			//contentType: 'application/json',
+			page: false,
 			cols: [
 				[{
 						field: 'id',
@@ -89,117 +147,44 @@ layui.use(['table', 'form'], function() {
 					},
 					{
 						field: 'number',
-						title: '物料编号'
+						title: '编号'
 					},
 					{
 						field: 'name',
-						title: '物料名称'
+						title: '品名'
 					},
 					{
-						field: 'color',
-						title: '物料颜色'
+						field: 'userNumber',
+						title: '客户编号'
 					},
 					{
-						field: 'specifications',
-						title: '物料规格'
+						field: 'userProductNmber',
+						title: '客户产品编号'
 					},
 					{
-						field: 'number',
-						title: '产品编号'
-					},
-					{
-					field: 'charge',
-					title: '负责人'
-				},
-					{
-						field: 'purchase',
-						title: '采购小组'
+						field: 'count',
+						title: '数量'
 					}
 				]
 			],
 			loading: true,
-			parseData: function(res) {
+			parseData: function(data) {
 				var arr;
 				var code;
 				var total;
 				if(res.code == "0010") {
 					code = 0;
 					arr = res.data.list;
+
 					total = res.data.total;
 				}
 				return {
 					"code": 0,
 					"msg": res.msg,
 					"count": total,
-					"data": arr
+					"data": data
 				};
 			}
 		})
-	}
-	$(document).on('click', '#add', function() {
-		splicing();
-	});
-	$(document).on('click', '.layui-icon-close', function() {
-		reduce(this);
-	});
-
-	var count = 1;
-	//splicing();
-	
-	
-	//添加
-	function splicing() {
-		var divContent = "";
-		count++
-		divContent += '<div class="layui-form-item" dataid="' + count + '">';
-		divContent += '<label class="layui-form-label">规格</label>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
-		divContent += '<select name="city" lay-verify="required">';
-		divContent += '<option value="">颜色</option>';
-		divContent += '<option value="0">金色</option>';
-		divContent += '<option value="1">银色</option>';
-		divContent += '<option value="2">蓝色</option>';
-		divContent += '</select>';
-		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
-		divContent += '<select name="city" lay-verify="required">';
-		divContent += '<option value="">尺寸</option>';
-		divContent += '<option value="0">S</option>';
-		divContent += '<option value="1">N</option>';
-		divContent += '<option value="2">L</option>';
-		divContent += '</select>';
-		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 70px;">';
-		divContent += '<select name="city" lay-verify="required">';
-		divContent += '<option value="">材质</option>';
-		divContent += '<option value="0">金属</option>';
-		divContent += '<option value="1">塑料</option>';
-		divContent += '<option value="2">木头</option>';
-		divContent += '</select>';
-		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 60px">';
-		divContent += '<input type="text" name="address" class="layui-input "placeholder="数量">';
-		divContent += '</div>';
-		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add"></i> </div>'
-		divContent += '</div>';
-		$('#product_color').append(divContent);
-		form.render('select');
-		reduce(obj);
-	}
-	//减少
-	function reduce(obj) {
-		console.log(obj.parentNode.parentNode.value)
-		var div = $(obj.parentNode.parentNode).attr('dataid')
-		console.log(div)
-		//		 $('#product_color').find('.layui-form-item').eq(div- 1).remove();
-
-		var str = $('#product_color').find('.layui-form-item').length;
-		for(var i = 0; i < str; i++) {
-			if($('#product_color').find('.layui-form-item').eq(i).attr('dataid') == div) {
-				console.log(1)
-				$('#product_color').find('.layui-form-item').eq(i).remove()
-			}
-
-		}
-	}
+		}*/
 });

@@ -130,9 +130,6 @@ layui.use(['table', 'form'], function() {
 		divContent += '<option value="2">正方形</option>';
 		divContent += '</select>';
 		divContent += '</div>';
-		divContent += '<div class="layui-input-inline" style="width: 60px">';
-		divContent += '<input type="text" name="address" class="layui-input "placeholder="数量">';
-		divContent += '</div>';
 		divContent += '<div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-close add"></i> </div>'
 		divContent += '</div>';
 		$('#product_color').append(divContent);

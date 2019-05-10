@@ -114,7 +114,11 @@
 									<table id="product" lay-filter="product"></table>
 								</div>
 								<div class="layui-col-md12">
-									<table id="materiel" lay-filter="materiel"></table>
+									<!--<table id="order" lay-filter="order"></table>-->
+									<div class="layui-form">
+										<table class="layui-table" id="order">
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -133,10 +137,21 @@
 		<script type="text/html" id="order_add">
 			<span class="layui-btn-sm layui-btn" onclick="userNumber()"><i class="layui-icon layui-icon-add-circle-fine" ></i></span>
 		</script>
-		<!--<script type="text/html" id="product_add">
-			<span class="layui-btn-sm layui-btn" onclick="add()">添加产品</span>
-			<span class="layui-btn-sm layui-btn" onclick="add2()">添加产品2</span>
-		</script>-->
+		<script type="text/html" id="product_add">
+
+			<div class="layui-row">
+				<form class="layui-form">
+					<div class="layui-input-inline">
+						<input type="text" name="username" placeholder="客户编号" autocomplete="off" class="layui-input" style="width: 150px;">
+					</div>
+					<div class="layui-input-inline">
+						<input type="text" name="username" placeholder="品名" autocomplete="off" class="layui-input" style="width: 150px;">
+					</div>
+					<div class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></div>
+				</form>
+			</div>
+		</script>
+
 		<script>
 			function add() {
 				index = layer.open({
@@ -165,7 +180,7 @@
 			function userNumber() {
 				index = layer.open({
 					type: 1,
-					area: ['500px', '200px'],
+					area: ['500px', '250px'],
 					anim: 2,
 					title: '客户产品编号',
 					maxmin: true,
@@ -236,12 +251,22 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">客户产品编号：</label>
 				<div class="layui-input-block widths">
-					<input type="text" name="address" class="layui-input ">
+					<input type="hidden" name="id" class="layui-input ">
+					<input type="hidden" name="number" class="layui-input ">
+					<input type="hidden" name="name" class="layui-input ">
+					<input type="hidden" name="userNumber" class="layui-input ">
+					<input type="text" name="userProductNmber" class="layui-input ">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">商品数量：</label>
+				<div class="layui-input-block widths">
+					<input type="text" name="count" class="layui-input ">
 				</div>
 			</div>
 			<div class="layui-form-item">
 				<div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="formDemo">确认</button>
+					<div class="layui-btn" lay-submit lay-filter="orderadd">确认</div>
 				</div>
 			</div>
 		</form>
