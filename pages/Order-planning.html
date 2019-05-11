@@ -40,13 +40,28 @@
 			<span class="layui-btn layui-btn-sm  layui-btn-danger">删除</span>
 		</script>
 		<script type="text/html" id="order_add">
-			<span class="layui-btn-sm layui-btn" onclick="add()">添加</span>
+			<div class="layui-row">
+			<div class="layui-input-inline">
+				<span class="layui-btn-sm layui-btn" onclick="add()">添加</span>
+			</div>
+			<div class="layui-input-inline">
+			<form class="layui-form">
+				<div class="layui-input-inline">
+					<input type="text" name="username" placeholder="订单编号" autocomplete="off" class="layui-input" style="width: 150px;">
+				</div>
+				<div class="layui-input-inline">
+					<input type="text" name="username" placeholder="日期" autocomplete="off" class="layui-input" style="width: 150px;">
+				</div>
+				<div class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></div>
+			</form>
+			</div>
+			</div>
 		</script>
 		<script type="text/html" id="order_update">
 			<span class="layui-btn-sm layui-btn" onclick="update()">修改</span>
 		</script>
 		<script type="text/html" id="order_xq">
-			<span class="layui-btn-sm layui-btn" onclick="see()">详情</span>
+			<span class="layui-btn-sm layui-btn" onclick="see()" id="look">详情</span>
 		</script>
 		<script type="text/html" id="order_export">
 			<span class="layui-btn-sm layui-btn  layui-btn-normal" title="详细报表">

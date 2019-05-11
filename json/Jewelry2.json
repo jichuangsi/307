@@ -9,7 +9,8 @@
 				"name":"耳环",
 				"supplier":"亚联有限公司",
 				"pic":"../images/1557474305(1).png",
-				"money":"1215"
+				"money":"1215",
+				"count":"20"
 			}, {
 				"id": 2,
 				"number":"19F-DPY-TS022",
@@ -17,7 +18,8 @@
 				"name":"耳环",
 				"supplier":"亚联有限公司",
 				"pic":"../images/1557474311(1).png",
-				"money":"1215"
+				"money":"1215",
+				"count":"20"
 			}, {
 				"id": 3,
 				"number":"19F-DPY-TS023",
@@ -25,7 +27,8 @@
 				"name":"耳环",
 				"supplier":"亚联有限公司",
 				"pic":"../images/1557474325(1).png",
-				"money":"1215"
+				"money":"1215",
+				"count":"20"
 			}
 		],
 		"total": 3,

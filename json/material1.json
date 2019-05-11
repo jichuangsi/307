@@ -8,7 +8,8 @@
 				"classification":"辅料",
 				"name":"金属配件",
 				"supplier":"亚联公司",
-				"pic":"../images/1557473009(1).png","money":"12"
+				"pic":"../images/1557473009(1).png","money":"12",
+				"count":"20"
 			}, {
 				"id": 2,
 				"number":"19F-DPY-TS022",
@@ -16,7 +17,8 @@
 				"name":"金属配件",
 				"supplier":"亚联公司",
 				"pic":"../images/1557473069(1).png",
-				"money":"115"
+				"money":"115",
+				"count":"20"
 			}, {
 				"id": 3,
 				"number":"19F-DPY-TS023",
@@ -24,7 +26,8 @@
 				"name":"金属配件",
 				"supplier":"亚联公司",
 				"pic":"../images/1557473115(1).png",
-				"money":"15"
+				"money":"15",
+				"count":"20"
 			}
 		],
 		"total": 3,

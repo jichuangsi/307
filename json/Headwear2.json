@@ -9,7 +9,8 @@
 				"name":"头圈",
 				"supplier":"亚联公司",
 				"pic":"../images/1557471623(1).png",
-				"money":"25"
+				"money":"25",
+				"count":"21"
 			}, {
 				"id": 2,
 				"number":"19F-DPY-TS022",
@@ -18,6 +19,7 @@
 				"supplier":"亚联公司",
 				"pic":"../images/1557471592(1).png",
 				"money":"15"
+				,"count":"20"
 			}, {
 				"id": 3,
 				"number":"19F-DPY-TS023",
@@ -25,7 +27,8 @@
 				"name":"头圈",
 				"supplier":"亚联公司",
 				"pic":"../images/1557471567(1).png",
-				"money":"15"
+				"money":"15",
+				"count":"20"
 			}
 		],
 		"total": 3,

@@ -9,7 +9,8 @@
 				"name":"珠子",
 				"supplier":"亚联公司",
 				"pic":"../images/1557473368(1).png",
-				"money":"15"
+				"money":"15",
+				"count":"20"
 			}, {
 				"id": 2,
 				"number":"19F-DPY-TS022",
@@ -17,7 +18,8 @@
 				"name":"珠子",
 				"supplier":"亚联公司",
 				"pic":"../images/1557473395(1).png",
-				"money":"15"
+				"money":"15",
+				"count":"20"
 			}, {
 				"id": 3,
 				"number":"19F-DPY-TS023",
@@ -25,7 +27,8 @@
 				"name":"珠子",
 				"supplier":"亚联公司",
 				"pic":"../images/1557473422(1).png",
-				"money":"15"
+				"money":"15",
+				"count":"20"
 			}
 		],
 		"total": 3,

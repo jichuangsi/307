@@ -4,28 +4,31 @@
 		"list": [
 			{
 				"id": 1,
-				"number":"19F-DPY-TS011",
-				"classification":"头饰",
-				"name":"头带",
-				"supplier":"亿量公司",
-				"pic":"../images/1557471250(1).png",
-				"money":"20"
+				"number": "19F-DPY-TS011",
+				"classification": "头饰",
+				"name": "头带",
+				"supplier": "亿量公司",
+				"pic": "../images/1557471250(1).png",
+				"money": "20",
+				"count": "20"
 			}, {
 				"id": 2,
-				"number":"19F-DPY-TS012",
-				"classification":"头饰",
-				"name":"头带",
-				"supplier":"亿量公司",
-				"pic":"../images/1557471432(1).png",
-				"money":"20"
+				"number": "19F-DPY-TS012",
+				"classification": "头饰",
+				"name": "头带",
+				"supplier": "亿量公司",
+				"pic": "../images/1557471432(1).png",
+				"money": "20",
+				"count": "20"
 			}, {
 				"id": 3,
-				"number":"19F-DPY-TS013",
-				"classification":"头饰",
-				"name":"头带",
-				"supplier":"亿量公司",
-				"pic":"../images/1557471405(1).png",
-				"money":"20"
+				"number": "19F-DPY-TS013",
+				"classification": "头饰",
+				"name": "头带",
+				"supplier": "亿量公司",
+				"pic": "../images/1557471405(1).png",
+				"money": "20",
+				"count": "20"
 			}
 		],
 		"total": 3,

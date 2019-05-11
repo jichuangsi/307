@@ -1,6 +1,10 @@
 layui.use(['table', 'form'], function() {
 	var table = layui.table;
 	var form = layui.form;
+	var classification = sessionStorage.getItem('classification')
+	console.log(classification);
+	$("#classification").find("option[value='" + classification + "']").prop("selected", true);
+	form.render('select')
 	table.render({
 		elem: '#demo',
 		method: "get",
@@ -91,14 +95,15 @@ layui.use(['table', 'form'], function() {
 		var param = data.value;
 		console.log(param.city)
 		if(param != "-1") {
-			$(document).on('click', '#add', function() {
-				splicing();
-			});
+
 		}
 	});
+	$(document).on('click', '#add', function() {
+		splicing();
+	});
 	$(document).on('click', '.zxc', function() {
-				reduce(this);
-			});
+		reduce(this);
+	});
 	$(document).on('click', '#add2', function() {
 		setSupplier();
 	});

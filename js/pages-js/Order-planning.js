@@ -50,26 +50,26 @@ layui.use(['table', 'form'], function() {
 					title: '产品列表',
 					toolbar: "#order_xq"
 				},
-				 {
+				{
 					field: 'appearance',
 					title: '删除',
 					toolbar: "#order_del"
 				},
-				 {
+				{
 					field: 'appearance',
 					title: '修改',
 					toolbar: "#order_update",
-					
+
 				},
-				 {
+				{
 					field: 'appearance',
 					title: '导出报表',
 					toolbar: "#order_export",
-					width:200
+					width: 200
 				}
 			]
 		],
-		toolbar:"#order_add",
+		toolbar: "#order_add",
 		loading: true,
 		parseData: function(res) {
 			var arr;
@@ -87,5 +87,11 @@ layui.use(['table', 'form'], function() {
 				"data": arr
 			};
 		}
+	})
+	table.on('row(demo)', function(data) {
+		var param = data.data;
+		$(document).on('click', '#look', function() {
+			sessionStorage.setItem('jsonId', param.id);
+		})
 	})
 });

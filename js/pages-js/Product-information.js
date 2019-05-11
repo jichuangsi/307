@@ -10,6 +10,7 @@ layui.use(['table', 'form'], function() {
 		var arr = str.split("="); //各个参数放到数组里
 		return arr[1];
 	}
+	var classification;
 	var id = UrlSearch();
 	var toUrl = "../json/Headwear1.json"
 	if(id == "1") {
@@ -18,15 +19,15 @@ layui.use(['table', 'form'], function() {
 		toUrl = "../json/Headwear2.json"
 	} else if(id == "3") {
 		toUrl = "../json/material1.json"
-	}else if(id == "4") {
+	} else if(id == "4") {
 		toUrl = "../json/material2.json"
-	}else if(id == "5") {
+	} else if(id == "5") {
 		toUrl = "../json/Sundry2.json"
-	}else if(id == "6") {
+	} else if(id == "6") {
 		toUrl = "../json/Sundry1.json"
-	}else if(id == "7") {
+	} else if(id == "7") {
 		toUrl = "../json/Jewelry1.json"
-	}else if(id == "8") {
+	} else if(id == "8") {
 		toUrl = "../json/Jewelry2.json"
 	}
 	table.render({
@@ -86,12 +87,12 @@ layui.use(['table', 'form'], function() {
 					align: 'center',
 					toolbar: "#productr_see2"
 				},
-//				{
-//					field: 'appearance',
-//					title: '查看物料',
-//					align: 'center',
-//					toolbar: "#productr_see"
-//				},
+				//				{
+				//					field: 'appearance',
+				//					title: '查看物料',
+				//					align: 'center',
+				//					toolbar: "#productr_see"
+				//				},
 				{
 					field: 'appearance',
 					title: '删除',
@@ -116,6 +117,7 @@ layui.use(['table', 'form'], function() {
 				code = 0;
 				arr = res.data.list;
 				total = res.data.total;
+				classification = arr[1].classification;
 			}
 			return {
 				"code": 0,
@@ -128,20 +130,24 @@ layui.use(['table', 'form'], function() {
 
 	table.on('row(demo)', function(data) {
 		var param = data.data;
-//		$(document).on('click', '#look', function() {
-//			renderTable();
-//		})
+		//		$(document).on('click', '#look', function() {
+		//			renderTable();
+		//		})
 		$(document).on('click', '#look2', function() {
-			var toUrl = "Commodity-details.html?id=" +param.id
-			sessionStorage.setItem('jsonId',id);
+			var toUrl = "Commodity-details.html?id=" + param.id
+			sessionStorage.setItem('jsonId', id);
 			window.open(toUrl, '_self');
 		})
-		form.val('test',{
-			"number":param.number,
-			"name":param.name,
-			"supplier":param.supplier
+
+		form.val('test', {
+			"number": param.number,
+			"name": param.name,
+			"supplier": param.supplier
 		});
 	});
+	$(document).on('click', '#add_product', function() {
+		sessionStorage.setItem('classification', classification);
+	})
 	renderTable = function() {
 		table.render({
 			elem: '#materiel',

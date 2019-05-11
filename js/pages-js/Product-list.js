@@ -1,11 +1,33 @@
 layui.use(['table', 'form'], function() {
 	var table = layui.table;
 	var form = layui.form;
+	
+var id=sessionStorage.getItem('jsonId');
+	var toUrl = "../json/Headwear1.json"
+	if(id == "1") {
+		toUrl = "../json/Headwear1.json"
+	} else if(id == "2") {
+		toUrl = "../json/Headwear2.json"
+	} else if(id == "3") {
+		toUrl = "../json/material1.json"
+	}else if(id == "4") {
+		toUrl = "../json/material2.json"
+	}else if(id == "5") {
+		toUrl = "../json/Sundry2.json"
+	}else if(id == "6") {
+		toUrl = "../json/Sundry1.json"
+	}else if(id == "7") {
+		toUrl = "../json/Jewelry1.json"
+	}else if(id == "8") {
+		toUrl = "../json/Jewelry2.json"
+	}
+	
+	
 	table.render({
 		elem: '#demo',
 		method: "get",
 		async: false,
-		url: "../json/data.json",
+		url: toUrl,
 		//		contentType: 'application/json',
 		//		headers: {
 		//			'accessToken': getToken()
@@ -21,18 +43,22 @@ layui.use(['table', 'form'], function() {
 					field: 'number',
 					title: '客户产品编号'
 				},
+					{
+					field: 'classification',
+					title: '类别'
+				},
 				{
 					field: 'name',
 					title: '品名'
 				},
 				{
-					field: 'color',
-					title: '颜色'
+					field: 'money',
+					title: '价格'
 				},
 
 				{
-					field: 'specifications',
-					title: '规格'
+					field: 'supplier',
+					title: '供货商'
 				},
 				{
 					field: 'count',
