@@ -5,7 +5,7 @@ layui.use(['table', 'form'], function() {
 		elem: '#product',
 		method: "get",
 		async: false,
-		url: "../json/test1.json",
+		url: "../json/Headwear1.json",
 		//		contentType: 'application/json',
 		//		headers: {
 		//			'accessToken': getToken()
@@ -22,22 +22,25 @@ layui.use(['table', 'form'], function() {
 					title: '编号'
 				},
 				{
+					field: 'classification',
+					title: '品名'
+				},
+				{
 					field: 'name',
 					title: '品名'
+				},
+				{
+					field: 'money',
+					title: '价格'
+				},
+				{
+					field: 'supplier',
+					title: '供应商'
 				},
 				{
 					field: 'userNumber',
 					title: '客户编号'
 				},
-				{
-					field: 'color',
-					title: '颜色'
-				},
-				//				{
-				//					field: 'appearance',
-				//					title: '查看物料',
-				//					toolbar: "#order_see"
-				//				},
 				{
 					field: 'appearance',
 					title: '加入订单',

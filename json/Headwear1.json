@@ -10,7 +10,8 @@
 				"supplier": "亿量公司",
 				"pic": "../images/1557471250(1).png",
 				"money": "20",
-				"count": "20"
+				"count": "20",
+				"userNumber": "C-001-H1"
 			}, {
 				"id": 2,
 				"number": "19F-DPY-TS-TS012",
@@ -19,7 +20,8 @@
 				"supplier": "亿量公司",
 				"pic": "../images/1557471432(1).png",
 				"money": "20",
-				"count": "20"
+				"count": "20",
+				"userNumber": "C-001-H1"
 			}, {
 				"id": 3,
 				"number": "19F-DPY-TS-TS013",
@@ -28,7 +30,8 @@
 				"supplier": "亿量公司",
 				"pic": "../images/1557471405(1).png",
 				"money": "20",
-				"count": "20"
+				"count": "20",
+				"userNumber": "C-001-H1"
 			}
 		],
 		"total": 3,
