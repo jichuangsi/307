@@ -4,7 +4,7 @@
 		"list": [
 			{
 				"id": 1,
-				"number":"19F-DPY-TS021",
+				"number":"19F-DPY-TS-TS021",
 				"classification":"头饰",
 				"name":"头圈",
 				"supplier":"亚联公司",
@@ -13,7 +13,7 @@
 				"count":"21"
 			}, {
 				"id": 2,
-				"number":"19F-DPY-TS022",
+				"number":"19F-DPY-TS-TS022",
 				"classification":"头饰",
 				"name":"头圈",
 				"supplier":"亚联公司",
@@ -22,7 +22,7 @@
 				,"count":"20"
 			}, {
 				"id": 3,
-				"number":"19F-DPY-TS023",
+				"number":"19F-DPY-TS-TS023",
 				"classification":"头饰",
 				"name":"头圈",
 				"supplier":"亚联公司",

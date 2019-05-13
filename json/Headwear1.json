@@ -4,7 +4,7 @@
 		"list": [
 			{
 				"id": 1,
-				"number": "19F-DPY-TS011",
+				"number": "19F-DPY-TS-TS011",
 				"classification": "头饰",
 				"name": "头带",
 				"supplier": "亿量公司",
@@ -13,7 +13,7 @@
 				"count": "20"
 			}, {
 				"id": 2,
-				"number": "19F-DPY-TS012",
+				"number": "19F-DPY-TS-TS012",
 				"classification": "头饰",
 				"name": "头带",
 				"supplier": "亿量公司",
@@ -22,7 +22,7 @@
 				"count": "20"
 			}, {
 				"id": 3,
-				"number": "19F-DPY-TS013",
+				"number": "19F-DPY-TS-TS013",
 				"classification": "头饰",
 				"name": "头带",
 				"supplier": "亿量公司",

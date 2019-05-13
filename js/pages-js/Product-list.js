@@ -137,8 +137,8 @@ var id=sessionStorage.getItem('jsonId');
 						title: '物料规格'
 					},
 					{
-						field: 'number',
-						title: '产品编号'
+						field: 'charge',
+						title: '负责人'
 					},
 					{
 						field: 'purchase',

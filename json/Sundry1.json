@@ -4,7 +4,7 @@
 		"list": [
 			{
 				"id": 1,
-				"number":"19F-DPY-TS021",
+				"number":"151F-DPY-ZL-TS021",
 				"classification":"杂货类",
 				"name":"包包",
 				"supplier":"亚联有限公司",
@@ -12,7 +12,7 @@
 				"money":"150"
 			}, {
 				"id": 2,
-				"number":"19F-DPY-TS022",
+				"number":"151F-DPY-ZL-TS022",
 				"classification":"杂货类",
 				"name":"包包",
 				"supplier":"亚联有限公司",
@@ -20,7 +20,7 @@
 				"money":"145"
 			}, {
 				"id": 3,
-				"number":"19F-DPY-TS023",
+				"number":"151F-DPY-ZL-TS023",
 				"classification":"杂货类",
 				"name":"包包",
 				"supplier":"亚联有限公司",

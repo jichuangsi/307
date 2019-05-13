@@ -4,7 +4,7 @@
 		"list": [
 			{
 				"id": 1,
-				"number":"19F-DPY-TS021",
+				"number":"191F-DPY-FL-TS021",
 				"classification":"辅料",
 				"name":"珠子",
 				"supplier":"亚联公司",
@@ -13,7 +13,7 @@
 				"count":"20"
 			}, {
 				"id": 2,
-				"number":"19F-DPY-TS022",
+				"number":"191F-DPY-FL-TS022",
 				"classification":"辅料",
 				"name":"珠子",
 				"supplier":"亚联公司",
@@ -22,7 +22,7 @@
 				"count":"20"
 			}, {
 				"id": 3,
-				"number":"19F-DPY-TS023",
+				"number":"191F-DPY-FL-TS023",
 				"classification":"辅料",
 				"name":"珠子",
 				"supplier":"亚联公司",

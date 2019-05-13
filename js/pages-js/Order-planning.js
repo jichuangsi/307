@@ -47,7 +47,7 @@ layui.use(['table', 'form'], function() {
 				},
 				{
 					field: 'appearance',
-					title: '产品列表',
+					title: '商品列表',
 					toolbar: "#order_xq"
 				},
 				{
