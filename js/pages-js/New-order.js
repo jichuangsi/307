@@ -23,7 +23,7 @@ layui.use(['table', 'form'], function() {
 				},
 				{
 					field: 'classification',
-					title: '品名'
+					title: '类别'
 				},
 				{
 					field: 'name',
