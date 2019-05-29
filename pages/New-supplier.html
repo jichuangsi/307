@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新建订单</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../css/font.css">
+		<link rel="stylesheet" href="../css/xadmin.css">
+		<link rel="stylesheet" href="../lib/layui/css/layui.css" media="all">
+		<script src="../lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/xadmin.js"></script>
+		<!-- <script type="text/javascript" src="../js/pages-js/New-order.js"></script> -->
+	</head>
+	<style>
+        .x-body {
+            width: 600px;
+        }
+		.widths {
+			width: 300px;
+		}
+		
+		.orderFont {
+			font-size: 16px;
+			font-weight: 400;
+		}
+		
+		.layui-form-label {
+			width: 100px;
+		}
+		
+		.layui-input-block {
+			margin-left: 130px;
+			min-height: 36px
+		}
+		
+		#order_addForm {
+			display: none;
+			margin-top: 10px;
+		}
+		
+		#order_userNumber {
+			display: none;
+			margin-top: 10px;
+		}
+		
+		.add {
+			font-size: 30px;
+		}
+		
+		#order_userNumber .add:hover {
+			cursor: pointer;
+		}
+	</style>
+
+	<body>
+		<div class="x-body">
+			<div id="product_addform" class="layui-fluid">
+				<form class="layui-form" autocomplete="off" lay-filter="test">
+					<div class="layui-row">
+						<div class="layui-col-md4">
+							<div class="layui-form-item">
+								<label class="layui-form-label orderFont">基本信息</label>
+								<div class="layui-input-block widths">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">供应商编号：</label>
+								<div class="layui-input-block widths">
+									<input type="text" name="schoolName" class="layui-input ">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">供应商名称：</label>
+								<div class="layui-input-block widths">
+									<input type="text" name="schoolName" class="layui-input ">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">地址：</label>
+								<div class="layui-input-block widths">
+									<input type="text" name="schoolName" class="layui-input ">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">目前状态：</label>
+								<div class="layui-input-block widths">
+									<input type="text" name="schoolName" class="layui-input ">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">联系电话：</label>
+								<div class="layui-input-block widths">
+									<input type="text" name="schoolName" class="layui-input ">
+								</div>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit lay-filter="formDemo">添加</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+				"id": 1,
+				"number": "19F-DPY-JS01",
+				"name": "头带",
+				"userNumber": "C-004-H4",
+				"color": "金色",
+				"specifications": "头饰",
+				"appearance": "金色钻戒",
+				"purchase": "1组",
+				"classification": "头饰",
+				"orderNumber": "OR-18-00031(19F-DPY)",
+				"materielNumber": "UP-002-JS",
+				"money": "21100",
+				"nearMoney":"20000",
+                "Buyer":"小明",
+				"charge": "小张",
+				"phone": "13750584874",
+				"date": "2016-12-31",
+				"texture": "金属",
+				"pic": "../images/1557221869(1).png",
+				"attribute": "颜色-尺寸-大小",
+				"supplier":"海亿金属材料公司",
+				"sellerNumber":"JS01",
+				"address":"广东 广州市 越秀区 街道地址北京路1号",
+				"status":"可用",
+                "customerName":"启蒙有限公司",
+                "examine":"已完成"
+				
+			}, {
+				"id": 2,
+				"number": "19F-DPY-SL01",
+				"name": "头带",
+				"userNumber": "C-004-H4",
+				"color": "白色",
+				"specifications": "40*40",
+				"appearance": "大理石圆桌",
+				"purchase": "2组",
+				"classification": "头饰",
+				"orderNumber": "OR-18-00032(19F-DPY)",
+				"materielNumber": "UP-002-SL",
+				"money": "2020",
+				"nearMoney":"2000",
+                "Buyer":"小明",
+				"charge": "小张",
+				"phone": "13750584874",
+				"date": "2016-12-31",
+				"texture": "金属",
+				"pic": "../images/1557281553(1).png",
+				"attribute": "质量-尺寸-大小",
+				"supplier":"沪宝金属材料公司",
+				"sellerNumber":"JS01",
+				"address":"广东 广州市 越秀区 街道地址北京路13号",
+				"status":"停用",
+				"customerName":"西星有限公司",
+                "examine":"已完成"
+			}
+		],
+		"total": 2,
+		"msg": "成功"
+	}
+}

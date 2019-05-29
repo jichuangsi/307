@@ -110,26 +110,26 @@ layui.use(['table', 'form', 'element'], function() {
 					align: 'center',
 					title: '客户名称'
 				},
-				{
-					field: 'address',
-					align: 'center',
-					title: '地址'
-				},
+				// {
+				// 	field: 'address',
+				// 	align: 'center',
+				// 	title: '地址'
+				// },
 				{
 					field: 'money',
 					align: 'center',
 					title: '出货价格(/元)'
 				},
-				{
-					field: 'phone',
-					align: 'center',
-					title: '类型电话'
-				},
-				{
-					field: 'charge',
-					align: 'center',
-					title: '负责人'
-				}
+				// {
+				// 	field: 'phone',
+				// 	align: 'center',
+				// 	title: '类型电话'
+				// },
+				// {
+				// 	field: 'charge',
+				// 	align: 'center',
+				// 	title: '负责人'
+				// }
 			]
 		],
 		loading: true,
@@ -267,36 +267,36 @@ layui.use(['table', 'form', 'element'], function() {
 					align: 'center',
 					title: '当前价格'
 				},
-				{
-					field: 'nearMoney',
-					align: 'center',
-					title: '近期价格'
-				},
-				{
-					field: 'address',
-					align: 'center',
-					title: '地址'
-				},
-				{
-					field: 'status',
-					align: 'center',
-					title: '目前状态'
-				},
-				{
-					field: 'date',
-					align: 'center',
-					title: '生效日期'
-				},
-				{
-					field: 'phone',
-					align: 'center',
-					title: '类型电话'
-				},
-				{
-					field: 'charge',
-					align: 'center',
-					title: '负责人'
-				}
+				// {
+				// 	field: 'nearMoney',
+				// 	align: 'center',
+				// 	title: '近期价格'
+				// },
+				// {
+				// 	field: 'address',
+				// 	align: 'center',
+				// 	title: '地址'
+				// },
+				// {
+				// 	field: 'status',
+				// 	align: 'center',
+				// 	title: '目前状态'
+				// },
+				// {
+				// 	field: 'date',
+				// 	align: 'center',
+				// 	title: '生效日期'
+				// },
+				// {
+				// 	field: 'phone',
+				// 	align: 'center',
+				// 	title: '类型电话'
+				// },
+				// {
+				// 	field: 'charge',
+				// 	align: 'center',
+				// 	title: '负责人'
+				// }
 			]
 		],
 		loading: true,

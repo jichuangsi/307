@@ -1,0 +1,46 @@
+{
+	"code": "0010",
+	"data": {
+		"list": [
+			{
+                "id": 1,
+                "name": "小张",
+                "userNumber": "C-001-H1",
+                "phone": 13725415423,
+                "department": "业务部",
+                "jurisdiction": "主管"
+				
+			}, {
+				"id": 2,
+                "name": "小周",
+                "userNumber": "C-002-H2",
+                "phone": 13726078586,
+                "department": "企划部",
+                "jurisdiction": "财务"
+			}, {
+				"id": 3,
+                "name": "小冯",
+                "userNumber": "C-003-H3",
+                "phone": 13727050442,
+                "department": "采购部",
+                "jurisdiction": "采购"
+			}, {
+				"id": 4,
+                "name": "小明",
+                "userNumber": "C-004-H4",
+                "phone": 13750584874,
+                "department": "采购部",
+                "jurisdiction": "采购"
+			}, {
+				"id": 5,
+                "name": "小万",
+                "userNumber": "C-005-H5",
+                "phone": 13725978754,
+                "department": "仓库部",
+                "jurisdiction": "仓库管理员"
+			}
+		],
+		"total": 5,
+		"msg": "成功"
+	}
+}
